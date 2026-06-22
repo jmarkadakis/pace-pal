@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Order confirmed | Pace Pal®</title>
+<meta name="description" content="Thank you for your Pace Pal order.">
+<meta name="theme-color" content="#04060d">
+<link rel="canonical" href="https://mypacepal.com/success">
+<meta property="og:title" content="Order confirmed | Pace Pal®">
+<meta property="og:description" content="Thank you for your Pace Pal order.">
+<meta property="og:image" content="images/og-image.jpg">
+<link rel="icon" href="images/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <nav class="nav">
+      <a class="brand" href="index.html"><span class="mark"></span>PACE&nbsp;PAL<sup>&reg;</sup></a>
+      <ul class="nav-links">
+        <li><a href="led-pace-clock.html">LED Clock</a></li>
+        <li><a href="lcd-pace-clock.html">LCD Clock</a></li>
+        <li><a href="training.html">Training</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-right">
+        <a class="btn btn--primary" href="led-pace-clock.html">Shop</a>
+        <button class="cart-btn" data-open-cart aria-label="Open cart">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 6h15l-1.5 9h-12L6 6Z"/><path d="M6 6 5 3H2"/><circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/></svg>
+          <span class="cart-count" data-cart-count>0</span>
+        </button>
+        <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="page-hero" style="padding-bottom:90px"><div class="wrap center">
+  <div class="reveal in" style="max-width:620px;margin:40px auto 0">
+    <div class="ico" style="width:64px;height:64px;margin:0 auto 24px;border-radius:16px;background:rgba(57,255,136,.12);border:1px solid rgba(57,255,136,.3);color:var(--led-green);display:grid;place-items:center"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg></div>
+    <h1>You&rsquo;re on pace.</h1>
+    <p class="lede" style="margin:18px auto 30px">Thanks for your order &mdash; a confirmation is on its way to your email. We&rsquo;ll be in touch with shipping details shortly.</p>
+    <div class="btn-row" style="justify-content:center"><a class="btn btn--primary btn--lg" href="index.html">Back to home</a><a class="btn btn--ghost btn--lg" href="training.html">Training ideas</a></div>
+  </div>
+</div></section>
+<script>try{localStorage.removeItem('pacepal_cart_v1')}catch(e){}</script>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a class="brand" href="index.html"><span class="mark"></span>PACE&nbsp;PAL<sup>&reg;</sup></a>
+        <p>The portable underwater pace clock for swimmers. Designed and milled in the USA.</p>
+      </div>
+      <div class="footer-col"><h4>Shop</h4>
+        <a href="led-pace-clock.html">LED Pace Clock</a>
+        <a href="lcd-pace-clock.html">LCD Pace Clock</a>
+        <a href="#" data-open-cart>Cart</a>
+      </div>
+      <div class="footer-col"><h4>Learn</h4>
+        <a href="training.html">Training Ideas</a>
+        <a href="about.html">About Pace Pal</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-col"><h4>Support</h4>
+        <a href="contact.html">Help &amp; returns</a>
+        <a href="privacy-policy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span data-year></span> Pace Pal, LLC. PACE PAL&reg; is a registered trademark. U.S. Patent No. 8,472,285.</span>
+      <span class="made">Rebuilt by Stellar Media Collective</span>
+    </div>
+  </div>
+</footer>
+<div class="drawer-scrim" data-drawer-scrim></div>
+<aside class="drawer" data-drawer aria-label="Shopping cart">
+  <div class="drawer-head"><h3>Your cart</h3><button class="drawer-close" data-close-cart aria-label="Close cart">&#10005;</button></div>
+  <div class="drawer-items" data-cart-items></div>
+  <div class="drawer-foot">
+    <div class="row"><span>Subtotal</span><span class="total" data-cart-total>$0</span></div>
+    <button class="btn btn--primary btn--block" data-checkout disabled>Checkout</button>
+    <p class="fineprint">Secure checkout via Stripe &middot; Shipping &amp; tax at checkout &middot; 60-day refund</p>
+  </div>
+</aside>
+<script src="js/main.js"></script>
+</body>
+</html>

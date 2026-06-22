@@ -1,0 +1,16 @@
+{
+  "name": "pace-pal",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Pace Pal® — the underwater pace clock for swimmers. Static storefront (Stripe Checkout + Resend) rebuilt by Stellar Media Collective.",
+  "type": "module",
+  "scripts": {
+    "build:pages": "python3 scripts/build.py",
+    "assets": "bash download-assets.sh",
+    "dev": "python3 -m http.server 8000"
+  },
+  "dependencies": {
+    "resend": "^6.12.4",
+    "stripe": "^18.5.0"
+  }
+}
