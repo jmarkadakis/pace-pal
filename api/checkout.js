@@ -12,10 +12,10 @@
 import Stripe from "stripe";
 
 // ---- Authoritative price map (USD cents) -------------------
-// NOTE: LED is a PLACEHOLDER ($795) pending confirmation from the client.
+// Prices confirmed from mypacepal.com/shop — both models $465.
 const CATALOG = {
-  led: { name: "LED Underwater Pace Clock — Light-Emitting Digits", amount: 79500 },
-  lcd: { name: "LCD Underwater Pace Clock — Reflects Ambient Light", amount: 62500 },
+  led: { name: "LED Underwater Pace Clock — Light-Emitting Digits", amount: 46500 },
+  lcd: { name: "LCD Underwater Pace Clock — Reflects Ambient Light", amount: 46500 },
 };
 
 export default async function handler(req, res) {

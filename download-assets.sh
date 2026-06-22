@@ -66,28 +66,20 @@ echo ""
 echo "Mirrored $ok image(s) into $SRC/."
 echo ""
 
-# ---- Best-effort mapping to the canonical names the HTML expects ----
-# Grab the FIRST uploads image referenced on each product page.
-first_img() {  # $1 = page path  -> echoes a source filename or empty
-  local url
-  url="$(curl -fsSL -A "$UA" "$SITE$1" 2>/dev/null \
-    | grep -oE 'https://[a-zA-Z0-9.\-]*mypacepal\.com/wp-content/uploads/[A-Za-z0-9_./~%-]+\.(jpg|jpeg|png|webp)' \
-    | sed -E 's/-[0-9]+x[0-9]+(\.(jpg|jpeg|png|webp))$/\1/' \
-    | head -n1)"
-  [ -n "$url" ] && basename "$url"
+# ---- Map the known originals to the canonical names the HTML expects ----
+map() {  # $1 source basename, $2 dest path
+  if [ -f "$SRC/$1" ]; then cp "$SRC/$1" "$2" && echo "  → $1  →  $2"; fi
 }
 
-map() {  # $1 source filename, $2 dest path
-  if [ -n "$1" ] && [ -f "$SRC/$1" ]; then cp "$SRC/$1" "$2" && echo "  → mapped $1  →  $2"; fi
-}
-
-echo "Mapping main product shots (review & adjust if needed):"
-map "$(first_img /product/led-underwater-pace-clock-light-emitting-digits/)" "$OUT/led-clock.jpg"
-map "$(first_img /product/lcd-underwater-pace-clock-liquid-crystal-display-reflecting-ambient-light/)" "$OUT/lcd-clock.jpg"
-map "$(first_img /about/)" "$OUT/larry.jpg"
-# Hero / lifestyle: first image on the homepage that isn't the LED product
-home_first="$(first_img /)"; map "$home_first" "$OUT/in-pool.jpg"
-[ -f "$OUT/led-clock.jpg" ] && cp "$OUT/led-clock.jpg" "$OUT/og-image.jpg" && echo "  → og-image.jpg from led-clock.jpg"
+echo "Mapping product + lifestyle shots to the names the pages use:"
+map "pace-clock-primary.png"          "$OUT/led-clock.jpg"      # LED studio shot
+map "pace-pal-pace-clock-9.jpg"       "$OUT/led-clock-2.jpg"    # LED alt
+map "Clock-LCD-unnamed.jpg"           "$OUT/lcd-clock.jpg"      # LCD studio shot
+map "IMG_9702.jpg"                    "$OUT/lcd-lifestyle.jpg"  # LCD on deck
+map "underwater-image.jpg"            "$OUT/in-pool.jpg"        # hero: swimmer + clock
+map "underwater-image.jpg"            "$OUT/og-image.jpg"       # social share image
+map "mypacepal-arm-over-clock.jpg"    "$OUT/in-pool-2.jpg"      # about / lifestyle
+map "mypacepal-peter-vanderkaay.png"  "$OUT/vanderkaay.png"     # endorser portrait
 
 echo ""
 echo "──────────────────────────────────────────────────────────"

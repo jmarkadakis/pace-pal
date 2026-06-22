@@ -15,8 +15,8 @@
       id: "led",
       name: "LED Underwater Pace Clock",
       tag: "Light-Emitting Digits",
-      price: 795,            // ← PLACEHOLDER — confirm real LED price
-      placeholderPrice: true,
+      price: 465,            // confirmed from mypacepal.com/shop
+      placeholderPrice: false,
       img: "images/led-clock.jpg",
       url: "led-pace-clock.html",
     },
@@ -24,7 +24,7 @@
       id: "lcd",
       name: "LCD Underwater Pace Clock",
       tag: "Reflects Ambient Light",
-      price: 625,            // confirmed from mypacepal.com
+      price: 465,            // confirmed from mypacepal.com/shop
       placeholderPrice: false,
       img: "images/lcd-clock.jpg",
       url: "lcd-pace-clock.html",

@@ -26,6 +26,7 @@ HEADER = """<header class="site-header">
         <li><a href="led-pace-clock.html">LED Clock</a></li>
         <li><a href="lcd-pace-clock.html">LCD Clock</a></li>
         <li><a href="training.html">Training</a></li>
+        <li><a href="testimonials.html">Reviews</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
@@ -55,6 +56,7 @@ FOOTER = """<footer class="site-footer">
       </div>
       <div class="footer-col"><h4>Learn</h4>
         <a href="training.html">Training Ideas</a>
+        <a href="testimonials.html">Testimonials</a>
         <a href="about.html">About Pace Pal</a>
         <a href="contact.html">Contact</a>
       </div>
@@ -192,8 +194,8 @@ PAGES["led-pace-clock"] = dict(
     title="LED Underwater Pace Clock | Pace Pal®",
     desc="The LED PACE PAL® underwater pace clock — bold light-emitting digits with three brightness levels, waterproof to 20 ft, rechargeable. Built in the USA.",
     body=product_page(
-        "led", "LED Underwater Pace Clock", "Light-Emitting Digits", "$795",
-        "Price shown is a placeholder pending confirmation",
+        "led", "LED Underwater Pace Clock", "Light-Emitting Digits", "$465",
+        "Three brightness levels",
         "Glowing, light-emitting digits with three brightness levels — the brightest, most visible PACE PAL®. Built for indoor pools, low light, deep water and the bottom of an Endless Pool®.",
         ["Bold LED digits, 2&frac14;&Prime; tall &mdash; readable ~25 yards away",
          "Three brightness levels for any lighting",
@@ -214,8 +216,8 @@ PAGES["lcd-pace-clock"] = dict(
     title="LCD Underwater Pace Clock | Pace Pal®",
     desc="The LCD PACE PAL® underwater pace clock — high-contrast bold black digits on silver, optimal for outdoor pools and well-lit natatoriums. Waterproof and durable.",
     body=product_page(
-        "lcd", "LCD Underwater Pace Clock", "Reflects Ambient Light", "$625",
-        "Confirmed pricing",
+        "lcd", "LCD Underwater Pace Clock", "Reflects Ambient Light", "$465",
+        "Best for bright, outdoor pools",
         "High-contrast, bold black digits on a silver face that reflect ambient light. The right choice for outdoor pools and bright, well-lit natatoriums where the sun and lights do the work.",
         ["Bold high-contrast black-on-silver digits",
          "Optimal in outdoor pools &amp; well-lit indoor pools",
@@ -289,7 +291,7 @@ PAGES["about"] = dict(
 
 <section class="section section--tight"><div class="wrap">
   <div class="split">
-    <div class="split-media reveal"><div class="media-frame tall"><img src="images/larry.jpg" alt="Larry Day, founder of Pace Pal"><div class="ph"><div><div class="ph-mark">Founder photo</div><div class="ph-label">images/larry.jpg</div></div></div></div></div>
+    <div class="split-media reveal"><div class="media-frame tall"><img src="images/in-pool-2.jpg" alt="Pace Pal underwater pace clock on the bottom of a pool"><div class="ph"><div><div class="ph-mark">Pace Pal in the water</div><div class="ph-label">images/in-pool-2.jpg</div></div></div></div></div>
     <div class="split-copy reveal" data-d="1">
       <h2>The need that started it</h2>
       <div class="prose">
@@ -350,6 +352,60 @@ PAGES["contact"] = dict(
     <p class="form-note">We reply to every message. Your details are only used to respond to you.</p>
   </form>
 </div></section>
+""",
+)
+
+# ---- Testimonials ----
+PAGES["testimonials"] = dict(
+    title="Testimonials | Pace Pal®",
+    desc="Olympic medalists, Olympic coaches and Hall-of-Famers train with PACE PAL®. Read endorsements from Peter Vanderkaay, Rowdy Gaines, Gregg Troy and Karlyn Pipes.",
+    body="""
+<section class="page-hero"><div class="wrap">
+  <div class="breadcrumb reveal"><a href="index.html">Home</a> / Testimonials</div>
+  <span class="eyebrow reveal" style="margin-top:18px">Endorsed by champions</span>
+  <h1 class="reveal" data-d="1">What the best in<br><span class="gradient-text">swimming say.</span></h1>
+  <p class="lede reveal" data-d="2">Olympic medalists, Olympic coaches and Hall-of-Famers train with Pace Pal. Here&rsquo;s why.</p>
+</div></section>
+
+<section class="section section--tight"><div class="wrap">
+  <div class="split">
+    <div class="split-media reveal"><div class="media-frame tall" style="aspect-ratio:3/4;display:grid;place-items:center;background:linear-gradient(165deg,var(--ink-600),var(--ink-800))"><img src="images/vanderkaay.png" alt="Peter Vanderkaay, four-time Olympic medalist and Pace Pal endorser" style="object-fit:contain;padding:24px"><div class="ph"><div><div class="ph-mark">Peter Vanderkaay</div><div class="ph-label">images/vanderkaay.png</div></div></div></div></div>
+    <div class="split-copy reveal" data-d="1">
+      <span class="eyebrow">Official endorser</span>
+      <h2 style="margin:16px 0 8px">Peter Vanderkaay</h2>
+      <p style="font-family:var(--font-led);font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--led-cyan)">4&times; Olympic medalist &middot; 2&times; Olympic gold</p>
+      <div class="prose" style="margin-top:18px">
+        <p>One of the premier distance and middle-distance freestyle specialists in the world. Peter graduated from the University of Michigan after winning five NCAA titles, took gold on the 800 freestyle relay in Athens (2004) and Beijing (2008), and earned individual bronze in the 200m freestyle (2008) and 400m freestyle (London 2012).</p>
+        <p style="color:var(--text)"><em>&ldquo;He used our pace clock for six months before endorsing Pace Pal&reg;.&rdquo;</em> &mdash; Larry Day, Founder</p>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<section class="section section--tight"><div class="wrap">
+  <div class="section-head reveal"><span class="eyebrow">In their words</span><h2>From medalists &amp; coaches</h2></div>
+  <div class="grid grid-2">
+    <div class="card reveal"><p style="font-family:var(--font-display);font-size:1.25rem;line-height:1.5;font-weight:600">&ldquo;Thanks so much for the pace clock&hellip; I just love it and use it every time I am in my Endless Pool.&rdquo;</p><div style="margin-top:20px;font-family:var(--font-led);font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;color:var(--led-cyan)">Rowdy Gaines<br><span style="color:var(--text-dim)">3&times; Olympic gold medalist</span></div></div>
+    <div class="card reveal" data-d="1"><p style="font-family:var(--font-display);font-size:1.25rem;line-height:1.5;font-weight:600">&ldquo;Pace Pal clocks have been a real plus for our program. They&rsquo;ve allowed our athletes to be more aware of their timing in practice &mdash; making sessions more reliable and visible to them.&rdquo;</p><div style="margin-top:20px;font-family:var(--font-led);font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;color:var(--led-cyan)">Gregg Troy<br><span style="color:var(--text-dim)">2012 USA Olympic coach</span></div></div>
+    <div class="card reveal"><p style="font-family:var(--font-display);font-size:1.25rem;line-height:1.5;font-weight:600">&ldquo;Pace Pal lets our coaches set up distance sets effectively, so they can focus more on technique and less on being human pace clocks. It&rsquo;s like having another coach on deck.&rdquo;</p><div style="margin-top:20px;font-family:var(--font-led);font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;color:var(--led-cyan)">USA Swimming coaching staff</div></div>
+    <div class="card reveal" data-d="1"><p style="font-family:var(--font-display);font-size:1.25rem;line-height:1.5;font-weight:600">&ldquo;LOVE my new Pace Pal&reg; digital pace-clock that sits right at the end of my lane&hellip; or even underwater! Larry Day, you are a genius.&rdquo;</p><div style="margin-top:20px;font-family:var(--font-led);font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;color:var(--led-cyan)">Karlyn Pipes<br><span style="color:var(--text-dim)">Int&rsquo;l Swimming Hall of Fame</span></div></div>
+  </div>
+</div></section>
+
+<section class="section section--tight"><div class="wrap">
+  <div class="section-head center reveal"><span class="eyebrow">Also endorsed by</span><h2>Trusted across the sport</h2></div>
+  <div class="grid grid-3">
+    <div class="card center reveal"><h3>Peter Vanderkaay</h3><p class="muted">4&times; Olympic medalist</p></div>
+    <div class="card center reveal" data-d="1"><h3>Gregg Troy</h3><p class="muted">2012 USA Olympic head coach</p></div>
+    <div class="card center reveal" data-d="2"><h3>Mike Bottom</h3><p class="muted">University of Michigan head coach</p></div>
+  </div>
+</div></section>
+
+<section class="section section--tight"><div class="wrap"><div class="cta-band reveal">
+  <h2>Train with the clock they trust</h2>
+  <p class="lede" style="margin:0 auto 26px">60-day, no-questions-asked refund. Built and milled in the USA.</p>
+  <div class="btn-row" style="justify-content:center"><a class="btn btn--primary btn--lg" href="led-pace-clock.html">Shop Pace Pal</a><a class="btn btn--ghost btn--lg" href="training.html">Training ideas</a></div>
+</div></div></section>
 """,
 )
 

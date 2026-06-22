@@ -9,7 +9,11 @@
 
 import { Resend } from "resend";
 
-const TO_EMAIL = "info@stellarmediacollective.com";
+// Lead delivery is intentionally PAUSED for now — submissions are accepted and
+// logged (visible in Vercel logs) but NOT emailed to anyone. When ready, set
+// DELIVERY_PAUSED to false and TO_EMAIL to the destination inbox.
+const DELIVERY_PAUSED = true;
+const TO_EMAIL = ""; // e.g. "orders@mypacepal.com" — left empty while paused
 const FROM = "Pace Pal <leads@stellarmediacollective.com>";
 
 const fieldLabels = {
@@ -40,6 +44,12 @@ export default async function handler(req, res) {
     if (typeof body[field] !== "string" || !body[field].trim()) {
       return res.status(400).json({ error: `Missing required field: ${field}` });
     }
+  }
+
+  // Paused: accept the submission so the form works, but don't deliver it anywhere.
+  if (DELIVERY_PAUSED || !TO_EMAIL) {
+    console.log("Contact submission received (delivery paused, not emailed):", body);
+    return res.status(200).json({ ok: true, paused: true });
   }
 
   const apiKey = process.env.RESEND_API_KEY;
