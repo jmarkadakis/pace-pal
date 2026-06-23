@@ -108,18 +108,6 @@
     });
   }
 
-  /* ---- Crisp LED timer overlaid on the hero clock ---------- */
-  const heroClk = document.querySelector("[data-hero-clock]");
-  if (heroClk) {
-    const hmm = heroClk.querySelector("#hclk-mm");
-    const hss = heroClk.querySelector("#hclk-ss");
-    let ht = 10 * 60 + 28; // start near the value shown on the real clock, then count up
-    const p2 = (n) => String(n).padStart(2, "0");
-    const hpaint = () => { hmm.textContent = p2(Math.floor(ht / 60) % 100); hss.textContent = p2(ht % 60); };
-    hpaint();
-    setInterval(() => { ht += 1; hpaint(); }, 1000);
-  }
-
   /* ===========================================================
      CART  (localStorage-backed, Stripe Checkout for payment)
      =========================================================== */
