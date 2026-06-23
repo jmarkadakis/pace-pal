@@ -79,7 +79,7 @@
     const pad = (n) => String(n).padStart(2, "0");
     const paint = () => {
       const m = Math.floor(Math.abs(t) / 60), s = Math.abs(t) % 60;
-      out.innerHTML = `${pad(m)}<span class="sep">:</span>${pad(s)}`;
+      out.innerHTML = `${pad(m)}<i>M</i>${pad(s)}<i>S</i>`;
       const lit = mode === "interval" ? (INTERVAL_TARGET - (t % INTERVAL_TARGET)) % INTERVAL_TARGET : t;
       dots.forEach((d, i) => d.classList.toggle("on", (Math.floor(lit) % 5) > i || (Math.floor(lit) % 5) === 0 && i < 5));
     };

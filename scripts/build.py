@@ -207,7 +207,7 @@ PAGES["led-pace-clock"] = dict(
          ("Range", "Up/down &middot; 0&ndash;99:59"), ("Waterproof", "To 20 feet"),
          ("Case", "9&frac34;&Prime; &times; 5&frac14;&Prime; &times; 2&frac18;&Prime; aluminum"), ("Weight", "~5.4 lbs"),
          ("Battery", "Rechargeable &middot; 8+ &times; 100 min"), ("Origin", "Designed &amp; milled in the USA")],
-        "", "12:34", "Counting up", "20",
+        "", "12<i>M</i>34<i>S</i>", "Counting up", "20",
     ),
 )
 
@@ -229,7 +229,7 @@ PAGES["lcd-pace-clock"] = dict(
          ("Range", "Counts up &middot; 0&ndash;99:59"), ("Waterproof", "Submersible"),
          ("Best for", "Outdoor &amp; well-lit pools"), ("Build", "Durable, patented design"),
          ("Battery", "Long battery life"), ("Origin", "Made in the USA")],
-        "", "08:15", "Ambient light", "",
+        "", "08<i>M</i>15<i>S</i>", "Ambient light", "",
     ),
 )
 

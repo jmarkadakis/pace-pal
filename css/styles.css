@@ -229,60 +229,73 @@ h3 { font-size: clamp(1.3rem, 2vw, 1.7rem); }
 
 .pace-clock {
   position: relative;
-  width: min(440px, 92%);
-  background: linear-gradient(160deg, #0d1424, #060a14);
-  border: 1px solid var(--line-strong);
+  width: min(460px, 94%);
   border-radius: 22px;
-  padding: 30px 28px 26px;
-  box-shadow: var(--shadow-card), inset 0 1px 0 rgba(255,255,255,.05);
+  padding: 26px 24px 22px;
+  background: linear-gradient(152deg, #e6e9ec 0%, #b3b9c0 18%, #d2d6da 42%, #969ca4 70%, #c2c7cd 100%);
+  box-shadow: var(--shadow-card), inset 0 2px 1px rgba(255,255,255,.7), inset 0 -3px 8px rgba(0,0,0,.28);
 }
+/* brushed-aluminum sheen + four corner screws */
 .pace-clock::before {
-  content:""; position:absolute; inset:0; border-radius:22px; padding:1px;
-  background: linear-gradient(160deg, rgba(46,230,255,.5), transparent 40%);
-  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
-  -webkit-mask-composite: xor; mask-composite: exclude; pointer-events:none;
+  content:""; position:absolute; inset:0; border-radius:22px; pointer-events:none;
+  background:
+    radial-gradient(circle at 17px 17px, #5b6168 0 2px, #2c3034 2.5px 3.5px, rgba(255,255,255,.5) 4px 5px, transparent 5.5px),
+    radial-gradient(circle at calc(100% - 17px) 17px, #5b6168 0 2px, #2c3034 2.5px 3.5px, rgba(255,255,255,.5) 4px 5px, transparent 5.5px),
+    radial-gradient(circle at 17px calc(100% - 17px), #5b6168 0 2px, #2c3034 2.5px 3.5px, rgba(255,255,255,.5) 4px 5px, transparent 5.5px),
+    radial-gradient(circle at calc(100% - 17px) calc(100% - 17px), #5b6168 0 2px, #2c3034 2.5px 3.5px, rgba(255,255,255,.5) 4px 5px, transparent 5.5px);
 }
 .pace-clock .screen {
-  background: radial-gradient(120% 120% at 50% 0%, #07131c, #02060c);
-  border-radius: 14px;
-  border: 1px solid rgba(46,230,255,.18);
-  padding: 26px 18px;
+  background: radial-gradient(120% 130% at 50% 8%, #10141a, #000 78%);
+  border-radius: 12px;
+  border: 4px solid #20242a;
+  padding: 26px 18px 22px;
   text-align: center;
   position: relative;
   overflow: hidden;
+  box-shadow: inset 0 0 22px rgba(0,0,0,.95), 0 1px 0 rgba(255,255,255,.55);
 }
 .pace-clock .screen::after { /* scanline sheen */
   content:""; position:absolute; inset:0;
-  background: repeating-linear-gradient(0deg, rgba(255,255,255,.025) 0 2px, transparent 2px 4px);
+  background: repeating-linear-gradient(0deg, rgba(255,255,255,.03) 0 2px, transparent 2px 4px);
   pointer-events:none;
 }
 .led-time {
   font-family: var(--font-led);
-  font-size: clamp(3.2rem, 9vw, 4.6rem);
-  font-weight: 400; letter-spacing: .04em;
-  color: var(--led-cyan);
-  text-shadow: 0 0 14px rgba(46,230,255,.85), 0 0 40px rgba(46,230,255,.4);
+  font-size: clamp(3.2rem, 9vw, 4.8rem);
+  font-weight: 400; letter-spacing: .05em;
+  color: #f6fdff;
+  text-shadow: 0 0 10px rgba(255,255,255,.6), 0 0 26px rgba(150,215,255,.4);
   line-height: 1;
 }
-.led-time .sep { animation: blink 1s steps(1) infinite; }
-@keyframes blink { 50% { opacity: .25; } }
+.led-time i {
+  font-style: normal; font-size: .3em; letter-spacing: 0; color: #d3eaf2; opacity: .9;
+  vertical-align: .75em; margin: 0 .14em 0 .05em; text-shadow: 0 0 6px rgba(255,255,255,.4);
+}
 .led-label {
-  margin-top: 14px; font-family: var(--font-led); font-size: .8rem;
-  letter-spacing: .3em; color: var(--text-dim); text-transform: uppercase;
+  margin-top: 12px; font-family: var(--font-led); font-size: .78rem;
+  letter-spacing: .28em; color: rgba(214,232,242,.5); text-transform: uppercase;
 }
-.clock-meta { display:flex; justify-content: space-between; align-items:center; margin-top: 18px; padding: 0 4px; }
-.clock-meta .dot-row { display:flex; gap:6px; }
-.clock-meta .dot { width:8px; height:8px; border-radius:50%; background: rgba(120,160,220,.25); }
-.clock-meta .dot.on { background: var(--led-green); box-shadow: 0 0 8px var(--led-green); }
-.clock-meta .badge { font-family: var(--font-led); font-size:.7rem; letter-spacing:.18em; color: var(--text-dim); text-transform: uppercase; }
-.clock-controls { display:flex; gap:10px; justify-content:center; margin-top:20px; }
+/* red control bar with three black knobs — MIN · SEC · START/STOP */
+.clock-buttons { position: relative; display:flex; justify-content:center; align-items:center; gap: 34px; margin: 18px auto 2px; width: 72%; }
+.clock-buttons::before {
+  content:""; position:absolute; top:50%; left:0; right:0; height:7px; transform: translateY(-50%);
+  background: linear-gradient(#e0463f, #9c1f1a); border-radius: 4px;
+  box-shadow: inset 0 1px 1px rgba(255,255,255,.3), 0 1px 2px rgba(0,0,0,.4);
+}
+.clock-buttons b {
+  position: relative; z-index:1; width: 22px; height: 22px; border-radius: 50%;
+  background: radial-gradient(circle at 35% 28%, #565b61, #0a0a0a 72%);
+  box-shadow: 0 2px 3px rgba(0,0,0,.5), inset 0 1px 1px rgba(255,255,255,.25);
+}
+.clock-caption { display:flex; justify-content:center; gap: 16px; margin-top: 6px; font-family: var(--font-led); font-size:.56rem; letter-spacing:.08em; color:#3c4147; text-transform:uppercase; }
+.clock-controls { display:flex; gap:10px; justify-content:center; margin-top:18px; }
 .clock-controls button {
-  font-family: var(--font-led); font-size:.72rem; letter-spacing:.14em; text-transform:uppercase;
-  padding: 9px 16px; border-radius: 999px; border:1px solid var(--line-strong); color: var(--text-soft);
-  transition:.2s;
+  font-family: var(--font-led); font-size:.72rem; letter-spacing:.12em; text-transform:uppercase;
+  padding: 9px 16px; border-radius: 999px; border:1px solid rgba(40,46,54,.45); color:#2b3036;
+  background: rgba(255,255,255,.22); transition:.2s;
 }
-.clock-controls button:hover { border-color: var(--led-cyan); color: var(--led-cyan); }
-.clock-controls button.active { background: rgba(46,230,255,.12); color: var(--led-cyan); border-color: var(--led-cyan); }
+.clock-controls button:hover { border-color:#1a1e24; color:#0e1116; background: rgba(255,255,255,.5); }
+.clock-controls button.active { background:#13171c; color:#f6fdff; border-color:#13171c; }
 
 /* ---- Marquee strip ---------------------------------------- */
 .strip { border-block: 1px solid var(--line); background: rgba(7,11,22,.6); overflow:hidden; }
