@@ -46,26 +46,16 @@
 
 <!-- ===== Hero ===== -->
 <section class="hero">
-  <div class="hero-media">
-    <img class="hero-photo" src="images/in-pool.jpg" alt="Pace Pal underwater pace clock resting on the pool bottom as a swimmer glides past">
-    <div class="hero-caustics"></div>
-  </div>
-  <div class="bubbles">
-    <span class="bubble" style="left:12%;width:10px;height:10px;animation-duration:11s;animation-delay:0s"></span>
-    <span class="bubble" style="left:23%;width:6px;height:6px;animation-duration:9s;animation-delay:2s"></span>
-    <span class="bubble" style="left:37%;width:14px;height:14px;animation-duration:14s;animation-delay:1s"></span>
-    <span class="bubble" style="left:51%;width:7px;height:7px;animation-duration:10s;animation-delay:4s"></span>
-    <span class="bubble" style="left:62%;width:11px;height:11px;animation-duration:13s;animation-delay:3s"></span>
-    <span class="bubble" style="left:73%;width:5px;height:5px;animation-duration:8s;animation-delay:1.5s"></span>
-    <span class="bubble" style="left:84%;width:9px;height:9px;animation-duration:12s;animation-delay:5s"></span>
-    <span class="bubble" style="left:92%;width:13px;height:13px;animation-duration:15s;animation-delay:2.5s"></span>
-  </div>
+  <video class="hero-video" autoplay muted loop playsinline poster="images/in-pool.jpg">
+    <source src="video/hero-underwater.mp4" type="video/mp4">
+    <source src="https://d8j0ntlcm91z4.cloudfront.net/user_33fUUrkrdzF44IiBGjfWFk9zbb0/hf_20260623_010728_040835ef-efc5-4ea4-b628-83389637f211.mp4" type="video/mp4">
+  </video>
   <div class="hero-scrim"></div>
   <div class="wrap hero-inner">
     <div class="hero-copy">
       <span class="eyebrow reveal">Designed &amp; milled in the USA</span>
       <h1 class="reveal" data-d="1">Stay on pace.<br><span class="gradient-text">On the bottom<br>of the pool.</span></h1>
-      <p class="lede reveal" data-d="2">PACE PAL® is the underwater pace clock built for swimmers who count every interval. Bold, high-visibility digits you can read 25 yards away — even with goggles on, even underwater.</p>
+      <p class="lede reveal" data-d="2">Stop lifting your head to find the wall clock. PACE PAL® sits on the bottom of the pool, right in your line of sight — bold digits you can read 25 yards away, even with goggles on, even underwater.</p>
       <div class="btn-row reveal" data-d="3">
         <a class="btn btn--primary btn--lg" href="led-pace-clock.html">Shop the LED Clock</a>
         <a class="btn btn--ghost btn--lg" href="#display">See it in action</a>
@@ -86,6 +76,35 @@
     <span>Marine-grade aluminum</span><span>Waterproof to 20 ft</span><span>Rechargeable</span><span>USRPT ready</span><span>Endless Pools®</span><span>Made in the USA</span>
   </div>
 </div>
+
+<!-- ===== The pain point ===== -->
+<section class="section" id="why">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <span class="eyebrow">The problem</span>
+      <h2>Every time you look up,<br>you slow down.</h2>
+      <p class="lede" style="margin:0 auto">A deck clock only helps if you break your stroke to read it — lift your head, drop your hips, and lose the back half of the lap. In a flow-current pool there's nowhere to put one at all. So most swimmers guess their pace and train in second gear.</p>
+    </div>
+    <div class="grid grid-3">
+      <div class="card reveal">
+        <div class="ico" style="background:rgba(255,176,46,.1);border-color:rgba(255,176,46,.28);color:var(--led-amber)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="6" r="3"/><path d="M6 21c0-4 3-6 6-6s6 2 6 6"/><path d="m17 3 4 4M21 3l-4 4"/></svg></div>
+        <h3>Head up, hips down</h3>
+        <p>Lifting to catch the wall clock wrecks your body position and kills your streamline off every single wall.</p>
+      </div>
+      <div class="card reveal" data-d="1">
+        <div class="ico" style="background:rgba(255,176,46,.1);border-color:rgba(255,176,46,.28);color:var(--led-amber)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 3l18 18"/><path d="M10.6 5.1A9.8 9.8 0 0 1 12 5c5 0 9 4.5 10 7-.4 1-1.4 2.5-3 3.8M6.6 6.6C4 8.1 2.4 10.4 2 12c1 2.5 5 7 10 7 1.4 0 2.7-.3 3.9-.8"/></svg></div>
+        <h3>You can't see it anyway</h3>
+        <p>Across the pool, with goggles on, underwater — a deck clock is a blur at the exact moment you need your split.</p>
+      </div>
+      <div class="card reveal" data-d="2">
+        <div class="ico" style="background:rgba(255,176,46,.1);border-color:rgba(255,176,46,.28);color:var(--led-amber)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M5.6 5.6l12.8 12.8"/></svg></div>
+        <h3>Nowhere to mount it</h3>
+        <p>Flow-current and Endless Pools® leave you with no usable clock position at all — so you swim blind.</p>
+      </div>
+    </div>
+    <p class="center reveal" style="font-size:1.15rem;color:var(--text-soft);margin:38px auto 0;max-width:58ch">PACE PAL® fixes all three. It sits on the bottom of the pool, in your line of sight, so you hold pace without ever breaking position. <a href="#display" style="color:var(--led-cyan);text-decoration:underline;text-underline-offset:3px">See how it works →</a></p>
+  </div>
+</section>
 
 <!-- ===== The display (interactive LED clock) ===== -->
 <section class="section section--tight" id="display">
