@@ -1,9 +1,15 @@
-# Hero video
+# Site videos
 
-The homepage hero (`index.html`) loads its background clip from two sources, in order:
+Two clips are used on the homepage. Each `<video>` tries the local file first,
+then falls back to the Higgsfield CDN (so the site works immediately either way).
 
-1. `video/hero-underwater.mp4`  ← this folder (self-hosted, preferred)
-2. Higgsfield CDN URL (fallback — works immediately, no action needed)
+| File | Used where | Clip |
+|------|-----------|------|
+| `video/hero.mp4` | Hero background | High-energy sequence (diver + swimmer + dynamic camera), Kling 3.0 pro |
+| `video/hero-underwater.mp4` | Testimonial banner | Calm underwater clip (swimmer glides past) |
+
+To self-host either, download it from the Higgsfield panel and save it at the
+exact path above, then commit + push. Until then they stream from the CDN.
 
 The site already works streaming from the CDN. To self-host for permanence
 (so the hero never depends on an external CDN):
