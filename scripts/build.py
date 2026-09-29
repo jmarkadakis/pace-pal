@@ -80,7 +80,7 @@ DRAWER = """<div class="drawer-scrim" data-drawer-scrim></div>
   <div class="drawer-foot">
     <div class="row"><span>Subtotal</span><span class="total" data-cart-total>$0</span></div>
     <button class="btn btn--primary btn--block" data-checkout disabled>Checkout</button>
-    <p class="fineprint">Secure checkout via Stripe &middot; Shipping &amp; tax at checkout &middot; 60-day refund</p>
+    <p class="fineprint">Secure checkout via Stripe &middot; Ships to the US and Canada &middot; 60-day refund</p>
   </div>
 </aside>"""
 
@@ -95,7 +95,7 @@ SHELL = """<!DOCTYPE html>
 <link rel="canonical" href="https://mypacepal.com/{slug}">
 <meta property="og:title" content="{title}">
 <meta property="og:description" content="{desc}">
-<meta property="og:image" content="images/og-image.jpg">
+<meta property="og:image" content="https://mypacepal.com/images/og-image.jpg">{robots}
 <link rel="icon" href="images/favicon.png">
 {fonts}
 <link rel="stylesheet" href="css/styles.css">
@@ -411,6 +411,7 @@ PAGES["testimonials"] = dict(
 
 # ---- Stripe success ----
 PAGES["success"] = dict(
+    noindex=True,
     title="Order confirmed | Pace Pal®",
     desc="Thank you for your Pace Pal order.",
     body="""
@@ -428,6 +429,7 @@ PAGES["success"] = dict(
 
 # ---- Stripe canceled ----
 PAGES["canceled"] = dict(
+    noindex=True,
     title="Checkout canceled | Pace Pal®",
     desc="Your checkout was canceled.",
     body="""
@@ -492,6 +494,8 @@ def build():
     for slug, page in PAGES.items():
         html = SHELL.format(
             title=page["title"], desc=page["desc"], slug=slug,
+            # Stripe return pages are for one buyer, not for search.
+            robots='\n<meta name="robots" content="noindex">' if page.get("noindex") else "",
             fonts=FONTS, header=HEADER, footer=FOOTER, drawer=DRAWER, body=page["body"],
         )
         (ROOT / f"{slug}.html").write_text(html, encoding="utf-8")

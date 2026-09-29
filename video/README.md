@@ -1,32 +1,24 @@
 # Site videos
 
-Two clips are used on the homepage. Each `<video>` tries the local file first,
-then falls back to the Higgsfield CDN (so the site works immediately either way).
+Two self-hosted loops on the homepage, each in two cuts plus a poster.
+They play through the small HeroVideo player at the end of `js/main.js`:
+720 cut on phones (640px and under), 1080 everywhere else, poster only for
+reduced motion or no JS. The testimonial loop waits until it is near the
+screen before it downloads anything. There is no third-party fallback.
 
-| File | Used where | Clip |
-|------|-----------|------|
-| `video/hero.mp4` | Hero background | High-energy sequence (diver + swimmer + dynamic camera), Kling 3.0 pro |
-| `video/hero-underwater.mp4` | Testimonial banner | Calm underwater clip (swimmer glides past) |
+| Files | Used where |
+|-------|-----------|
+| `hero-720.mp4`, `hero-1080.mp4`, `hero-poster.jpg` | Hero background |
+| `testimonial-720.mp4`, `testimonial-1080.mp4`, `testimonial-poster.jpg` | Endorsements section |
 
-To self-host either, download it from the Higgsfield panel and save it at the
-exact path above, then commit + push. Until then they stream from the CDN.
+Encoded 2026-10 from the original 2084x992 masters (22 MB and 10.6 MB, still
+in git history as `video/hero.mp4` and `video/testimonial.mp4`):
 
-The site already works streaming from the CDN. To self-host for permanence
-(so the hero never depends on an external CDN):
+```bash
+ffmpeg -i hero.mp4 -an -c:v libx264 -preset slow -crf 24 -vf "scale=1280:-2" -pix_fmt yuv420p -profile:v high -movflags +faststart hero-720.mp4
+ffmpeg -i hero.mp4 -an -c:v libx264 -preset slow -crf 22 -vf "scale=1920:-2" -pix_fmt yuv420p -profile:v high -movflags +faststart hero-1080.mp4
+ffmpeg -i hero.mp4 -frames:v 1 -vf "scale=1920:-2" -q:v 4 hero-poster.jpg
+```
 
-1. In the Higgsfield panel, open the underwater hero clip and **Download** it.
-2. Save it here as exactly: `video/hero-underwater.mp4`
-3. Commit + push:
-
-   ```bash
-   cd ~/github/clients/pace-pal
-   git add video/hero-underwater.mp4
-   git commit -m "Self-host hero video"
-   git push
-   ```
-
-The browser tries the local file first and only falls back to the CDN if it's
-missing — so once the file is here, the hero serves entirely from your own site.
-
-> Take A (wired): hf_20260623_010728_040835ef-…mp4
-> Take B (alt):   hf_20260623_010728_3d6d32a2-…mp4
+Same for `testimonial`. Both loops are generated footage (Higgsfield / Kling);
+a real product film is still to come.

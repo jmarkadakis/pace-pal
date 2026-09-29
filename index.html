@@ -10,7 +10,7 @@
 <meta property="og:title" content="Pace Pal® — The Underwater Pace Clock for Swimmers">
 <meta property="og:description" content="Bold LED digits you can read across the pool, on the bottom of the pool. Waterproof to 20 ft. Built in the USA.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="images/og-image.jpg">
+<meta property="og:image" content="https://mypacepal.com/images/og-image.jpg">
 <link rel="icon" href="images/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -46,10 +46,8 @@
 
 <!-- ===== Hero ===== -->
 <section class="hero">
-  <video class="hero-video" autoplay muted loop playsinline poster="images/in-pool.jpg">
-    <source src="video/hero.mp4" type="video/mp4">
-    <source src="https://d8j0ntlcm91z4.cloudfront.net/user_33fUUrkrdzF44IiBGjfWFk9zbb0/hf_20260623_212731_a16fb84c-72a1-4143-9ceb-5e0265390c3f.mp4" type="video/mp4">
-  </video>
+  <!-- HeroVideo (js/main.js): picks the 720 or 1080 cut on load, poster only for reduced motion or no JS. -->
+  <video class="hero-video" data-hero-video data-src-720="video/hero-720.mp4" data-src-1080="video/hero-1080.mp4" muted loop playsinline preload="none" poster="video/hero-poster.jpg" aria-hidden="true" tabindex="-1"></video>
   <div class="hero-scrim"></div>
   <div class="wrap hero-inner">
     <div class="hero-copy">
@@ -304,10 +302,7 @@
     </div>
 
     <div class="video-frame reveal" style="margin-bottom:52px">
-      <video autoplay muted loop playsinline poster="images/in-pool.jpg" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
-        <source src="video/testimonial.mp4" type="video/mp4">
-        <source src="https://d8j0ntlcm91z4.cloudfront.net/user_33fUUrkrdzF44IiBGjfWFk9zbb0/hf_20260623_010728_040835ef-efc5-4ea4-b628-83389637f211.mp4" type="video/mp4">
-      </video>
+      <video data-hero-video data-lazy data-src-720="video/testimonial-720.mp4" data-src-1080="video/testimonial-1080.mp4" muted loop playsinline preload="none" poster="video/testimonial-poster.jpg" aria-hidden="true" tabindex="-1" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"></video>
     </div>
 
     <div class="split" style="align-items:center;margin-bottom:52px">
@@ -406,7 +401,7 @@
   <div class="drawer-foot">
     <div class="row"><span>Subtotal</span><span class="total" data-cart-total>$0</span></div>
     <button class="btn btn--primary btn--block" data-checkout disabled>Checkout</button>
-    <p class="fineprint">Secure checkout via Stripe · Shipping &amp; tax at checkout · 60-day refund</p>
+    <p class="fineprint">Secure checkout via Stripe · Ships to the US and Canada · 60-day refund</p>
   </div>
 </aside>
 
