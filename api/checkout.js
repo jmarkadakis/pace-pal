@@ -5,6 +5,17 @@
 //
 // Required env var:  STRIPE_SECRET_KEY  (sk_test_… or sk_live_…)
 // Optional env var:  SITE_URL           (e.g. https://mypacepal.com) for redirects
+// Optional env var:  STRIPE_SHIPPING_RATE_IDS  comma-separated Stripe shipping
+//                    rate ids (shr_…), made in the Stripe dashboard under
+//                    Products → Shipping rates. The amounts live in Stripe, so
+//                    the owner sets them there, not in code.
+// Optional env var:  STRIPE_AUTOMATIC_TAX=1  turns on Stripe Tax. Only set it
+//                    after Stripe Tax is activated in the dashboard (origin
+//                    address + where you're registered to collect), or every
+//                    checkout fails.
+//
+// Shipping and tax are charged at checkout (owner's call, 2026-09-30). Both
+// are switched on by env so the site keeps working before Stripe is set up.
 //
 // Until STRIPE_SECRET_KEY is set, this returns a friendly 503 and the cart
 // shows a "payments not configured yet" note instead of breaking.
@@ -14,8 +25,8 @@ import Stripe from "stripe";
 // ---- Authoritative price map (USD cents) -------------------
 // Prices confirmed from mypacepal.com/shop — both models $465.
 const CATALOG = {
-  led: { name: "LED Underwater Pace Clock — Light-Emitting Digits", amount: 46500 },
-  lcd: { name: "LCD Underwater Pace Clock — Reflects Ambient Light", amount: 46500 },
+  led: { name: "LED Underwater Pace Clock: Light-Emitting Digits", amount: 46500 },
+  lcd: { name: "LCD Underwater Pace Clock: Reflects Ambient Light", amount: 46500 },
 };
 
 export default async function handler(req, res) {
@@ -41,7 +52,9 @@ export default async function handler(req, res) {
       price_data: {
         currency: "usd",
         unit_amount: product.amount,
-        product_data: { name: product.name },
+        // General tangible goods, so Stripe Tax knows what it's taxing.
+        product_data: { name: product.name, tax_code: "txcd_99999999" },
+        tax_behavior: "exclusive",
       },
     });
   }
@@ -56,6 +69,13 @@ export default async function handler(req, res) {
     process.env.SITE_URL ||
     (req.headers.origin ? req.headers.origin : `https://${req.headers.host}`);
 
+  const shipping_options = (process.env.STRIPE_SHIPPING_RATE_IDS || "")
+    .split(",")
+    .map((id) => id.trim())
+    .filter(Boolean)
+    .map((shipping_rate) => ({ shipping_rate }));
+  const automatic_tax = { enabled: process.env.STRIPE_AUTOMATIC_TAX === "1" };
+
   try {
     const stripe = new Stripe(key);
     const session = await stripe.checkout.sessions.create({
@@ -64,6 +84,8 @@ export default async function handler(req, res) {
       billing_address_collection: "required",
       shipping_address_collection: { allowed_countries: ["US", "CA"] },
       phone_number_collection: { enabled: true },
+      ...(shipping_options.length ? { shipping_options } : {}),
+      automatic_tax,
       success_url: `${origin}/success?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${origin}/canceled`,
     });
