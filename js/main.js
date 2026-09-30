@@ -258,4 +258,35 @@
 
   /* ---- Footer year ----------------------------------------- */
   document.querySelectorAll("[data-year]").forEach((el) => (el.textContent = new Date().getFullYear()));
+
+  /* ---- HeroVideo (plain-JS port of the Stellar player) -------
+     <video data-hero-video data-src-720 data-src-1080 [data-lazy] poster>
+     - No src in the markup, so nothing downloads until this runs.
+     - Picks the source once, on load: phones (<= 640px) get the 720 cut,
+       everything else the 1080. A <source media> query is only read once
+       and can pin a desktop to the small file, so it is chosen here.
+     - data-lazy waits until the video is within a screen of the viewport.
+     - Reduced motion (or no JS): the poster stays, nothing plays.
+     - Self-hosted only. No third-party fallback. ------------- */
+  const reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  document.querySelectorAll("video[data-hero-video]").forEach((el) => {
+    if (reduceMotion) return;
+    el.muted = true;
+    const start = () => { const p = el.play(); if (p && p.catch) p.catch(() => {}); };
+    const load = () => {
+      const w = window.innerWidth;
+      const src = w > 0 && w <= 640 ? el.getAttribute("data-src-720") : el.getAttribute("data-src-1080");
+      if (!src) return;
+      el.preload = "auto";
+      el.src = src;
+      // Autoplay can still be refused (low power mode, data saver): the poster stays up.
+      if (el.readyState >= 3) start();
+      else el.addEventListener("canplay", start, { once: true });
+    };
+    if (!("lazy" in el.dataset) || !("IntersectionObserver" in window)) { load(); return; }
+    const vio = new IntersectionObserver((entries) => {
+      if (entries.some((e) => e.isIntersecting)) { vio.disconnect(); load(); }
+    }, { rootMargin: "100% 0px" });
+    vio.observe(el);
+  });
 })();
