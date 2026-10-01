@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pace Pal® — The Underwater Pace Clock for Swimmers</title>
+<title>Pace Pal® | The Underwater Pace Clock for Swimmers</title>
 <meta name="description" content="PACE PAL® is the high-visibility underwater pace clock built for serious swimmers. Marine-grade aluminum, waterproof to 20 ft, bold LED digits you can read across the pool. Designed and milled in the USA.">
 <meta name="theme-color" content="#04060d">
 <link rel="canonical" href="https://mypacepal.com/">
-<meta property="og:title" content="Pace Pal® — The Underwater Pace Clock for Swimmers">
+<meta property="og:title" content="Pace Pal® | The Underwater Pace Clock for Swimmers">
 <meta property="og:description" content="Bold LED digits you can read across the pool, on the bottom of the pool. Waterproof to 20 ft. Built in the USA.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://mypacepal.com/images/og-image.jpg">
@@ -44,82 +44,96 @@
   </div>
 </header>
 
-<!-- ===== Hero ===== -->
+<!-- ===== Hero: the real clock in the water ===== -->
 <section class="hero">
-  <!-- HeroVideo (js/main.js): picks the 720 or 1080 cut on load, poster only for reduced motion or no JS. -->
-  <video class="hero-video" data-hero-video data-src-720="video/hero-720.mp4" data-src-1080="video/hero-1080.mp4" muted loop playsinline preload="none" poster="video/hero-poster.jpg" aria-hidden="true" tabindex="-1"></video>
-  <div class="hero-scrim"></div>
+  <div class="hero-photo">
+    <img src="images/in-pool.jpg" alt="A swimmer underwater beside a PACE PAL LED clock reading 10:28 on the bottom of the pool" fetchpriority="high">
+  </div>
   <div class="wrap hero-inner">
     <div class="hero-copy">
-      <span class="eyebrow reveal">Designed &amp; milled in the USA</span>
-      <h1 class="reveal" data-d="1">Stay on pace.<br><span class="gradient-text">On the bottom<br>of the pool.</span></h1>
-      <p class="lede reveal" data-d="2">Stop lifting your head to find the wall clock. PACE PAL® sits on the bottom of the pool, right in your line of sight — bold digits you can read 25 yards away, even with goggles on, even underwater.</p>
-      <div class="btn-row reveal" data-d="3">
-        <a class="btn btn--primary btn--lg" href="led-pace-clock.html">Shop the LED Clock</a>
-        <a class="btn btn--ghost btn--lg" href="#display">See it in action</a>
+      <p class="label hero-in">Underwater pace clock</p>
+      <h1 class="hero-in" data-d="1">Stay on pace.<br><span class="soft">On the bottom of the pool.</span></h1>
+      <p class="lede hero-in" data-d="2">Stop lifting your head to find the wall clock. PACE PAL® sits on the bottom of the pool, right in your line of sight, with bold digits you can read 25 yards away, even with goggles on, even underwater.</p>
+      <div class="btn-row hero-in" data-d="3">
+        <a class="btn btn--primary btn--lg" href="#choose">Choose your clock</a>
+        <a class="link-arrow" href="#display">See the display</a>
       </div>
-      <div class="hero-stats reveal" data-d="3">
-        <div class="hero-stat"><div class="n">20 ft</div><div class="l">Waterproof depth</div></div>
-        <div class="hero-stat"><div class="n">0–99:59</div><div class="l">Count up or down</div></div>
-        <div class="hero-stat"><div class="n">25 yd</div><div class="l">Visible across the pool</div></div>
-      </div>
+      <p class="hero-note hero-in" data-d="3">Designed &amp; milled in the USA &middot; 60-day refund</p>
     </div>
   </div>
 </section>
 
-<!-- ===== Marquee ===== -->
-<div class="strip">
-  <div class="track">
-    <span>Marine-grade aluminum</span><span>Waterproof to 20 ft</span><span>Rechargeable</span><span>USRPT ready</span><span>Endless Pools®</span><span>Made in the USA</span>
-    <span>Marine-grade aluminum</span><span>Waterproof to 20 ft</span><span>Rechargeable</span><span>USRPT ready</span><span>Endless Pools®</span><span>Made in the USA</span>
+<!-- ===== Choose: LED or LCD ===== -->
+<section class="choose" id="choose">
+  <div class="wrap">
+    <div class="choose-head reveal">
+      <h2>Two clocks. Pick by the light in your pool.</h2>
+      <p class="muted">Both sit on the bottom of the pool, in your line of sight. The difference is the display.</p>
+    </div>
+    <div class="choose-grid">
+      <article class="model reveal">
+        <a class="model-photo" href="led-pace-clock.html"><img src="images/led-front.jpg" alt="LED Underwater Pace Clock showing 10:28 in white light-emitting digits" loading="lazy"></a>
+        <div class="model-body">
+          <p class="label">LED &middot; Light-emitting digits</p>
+          <h3>For indoor pools, low light and deep water</h3>
+          <p class="muted">Glowing LED digits with three brightness levels. The brightest, most visible option.</p>
+          <div class="model-foot">
+            <span class="price">$465 <small>USD</small></span>
+            <button class="btn btn--primary" data-add="led">Add to cart</button>
+            <a class="link-arrow" href="led-pace-clock.html">LED details</a>
+          </div>
+        </div>
+      </article>
+      <article class="model reveal" data-d="1">
+        <a class="model-photo" href="lcd-pace-clock.html"><img src="images/lcd-front.jpg" alt="LCD Underwater Pace Clock showing 11:30 in black digits on silver" loading="lazy"></a>
+        <div class="model-body">
+          <p class="label">LCD &middot; Reflects ambient light</p>
+          <h3>For outdoor pools and well-lit natatoriums</h3>
+          <p class="muted">High-contrast bold black digits on silver, where ambient light does the work.</p>
+          <div class="model-foot">
+            <span class="price">$465 <small>USD</small></span>
+            <button class="btn btn--primary" data-add="lcd">Add to cart</button>
+            <a class="link-arrow" href="lcd-pace-clock.html">LCD details</a>
+          </div>
+        </div>
+      </article>
+    </div>
   </div>
-</div>
+</section>
 
-<!-- ===== The pain point ===== -->
+<!-- ===== The problem ===== -->
 <section class="section" id="why">
   <div class="wrap">
-    <div class="section-head center reveal">
-      <span class="eyebrow">The problem</span>
-      <h2>Every time you look up,<br>you slow down.</h2>
-      <p class="lede" style="margin:0 auto">A deck clock only helps if you break your stroke to read it — lift your head, drop your hips, and lose the back half of the lap. In a flow-current pool there's nowhere to put one at all. So most swimmers guess their pace and train in second gear.</p>
-    </div>
-    <div class="grid grid-3">
-      <div class="card reveal">
-        <div class="ico" style="background:rgba(255,176,46,.1);border-color:rgba(255,176,46,.28);color:var(--led-amber)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="6" r="3"/><path d="M6 21c0-4 3-6 6-6s6 2 6 6"/><path d="m17 3 4 4M21 3l-4 4"/></svg></div>
-        <h3>Head up, hips down</h3>
-        <p>Lifting to catch the wall clock wrecks your body position and kills your streamline off every single wall.</p>
-      </div>
-      <div class="card reveal" data-d="1">
-        <div class="ico" style="background:rgba(255,176,46,.1);border-color:rgba(255,176,46,.28);color:var(--led-amber)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 3l18 18"/><path d="M10.6 5.1A9.8 9.8 0 0 1 12 5c5 0 9 4.5 10 7-.4 1-1.4 2.5-3 3.8M6.6 6.6C4 8.1 2.4 10.4 2 12c1 2.5 5 7 10 7 1.4 0 2.7-.3 3.9-.8"/></svg></div>
-        <h3>You can't see it anyway</h3>
-        <p>Across the pool, with goggles on, underwater — a deck clock is a blur at the exact moment you need your split.</p>
-      </div>
-      <div class="card reveal" data-d="2">
-        <div class="ico" style="background:rgba(255,176,46,.1);border-color:rgba(255,176,46,.28);color:var(--led-amber)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M5.6 5.6l12.8 12.8"/></svg></div>
-        <h3>Nowhere to mount it</h3>
-        <p>Flow-current and Endless Pools® leave you with no usable clock position at all — so you swim blind.</p>
+    <div class="problem">
+      <h2 class="reveal">Every time you look up, you slow down.</h2>
+      <div class="reveal" data-d="1">
+        <p class="lede">A deck clock only helps if you break your stroke to read it: lift your head, drop your hips, and lose the back half of the lap. In a flow-current pool there's nowhere to put one at all. So most swimmers guess their pace and train in second gear.</p>
+        <ol class="numbered">
+          <li><b>Head up, hips down.</b> Lifting to catch the wall clock wrecks your body position and kills your streamline off every wall.</li>
+          <li><b>You can't see it anyway.</b> Across the pool, with goggles on, underwater, a deck clock is a blur at the moment you need your split.</li>
+          <li><b>Nowhere to mount it.</b> Flow-current pools and Endless Pools® leave you with no usable clock position at all.</li>
+        </ol>
+        <p class="problem-fix">PACE PAL® fixes all three. It sits on the bottom of the pool, in your line of sight, so you hold pace without breaking position.</p>
       </div>
     </div>
-    <p class="center reveal" style="font-size:1.15rem;color:var(--text-soft);margin:38px auto 0;max-width:58ch">PACE PAL® fixes all three. It sits on the bottom of the pool, in your line of sight, so you hold pace without ever breaking position. <a href="#display" style="color:var(--led-cyan);text-decoration:underline;text-underline-offset:3px">See how it works →</a></p>
   </div>
 </section>
 
 <!-- ===== The display (interactive LED clock) ===== -->
-<section class="section section--tight" id="display">
+<section class="display" id="display">
   <div class="wrap">
     <div class="split">
       <div class="split-copy reveal">
-        <span class="eyebrow">The display</span>
-        <h2>Count up, count down,<br>hold your send-off</h2>
-        <p class="lede">Bold LED digits you can read across the pool. Tap a mode to watch it run — exactly like the clock on the bottom of your lane.</p>
+        <p class="label">The display</p>
+        <h2>Count up, count down, hold your send-off</h2>
+        <p class="lede">Tap a mode to watch it run, the way it runs on the bottom of your lane.</p>
         <ul class="checklist">
-          <li>Counts up or down, 0–99:59</li>
+          <li>Counts up or down, 0&ndash;99:59</li>
           <li>Three brightness levels for any pool</li>
           <li>Interval mode for USRPT send-offs</li>
         </ul>
       </div>
       <div class="clock-stage reveal" data-d="1">
-        <span class="ripple"></span><span class="ripple"></span><span class="ripple"></span>
         <div class="pace-clock" data-pace-clock>
           <div class="screen">
             <div class="led-time">00<i>M</i>00<i>S</i></div>
@@ -138,227 +152,132 @@
   </div>
 </section>
 
-<!-- ===== Why it's built different ===== -->
-<section class="section" id="how">
+<!-- ===== Build + specs (one section, no repeats) ===== -->
+<section class="section build" id="how">
   <div class="wrap">
-    <div class="section-head center reveal">
-      <span class="eyebrow">Built different</span>
-      <h2>A pace clock that actually lives in the water</h2>
-      <p class="lede" style="margin:0 auto">Most clocks sit on the deck where you can barely see them. PACE PAL® sits where you swim — bright, bold, and impossible to miss on every breath.</p>
-    </div>
-    <div class="grid grid-3">
-      <div class="card reveal">
-        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3s7 6.5 7 11a7 7 0 1 1-14 0c0-4.5 7-11 7-11Z"/></svg></div>
-        <h3>Waterproof to 20 ft</h3>
-        <p>Sealed for the deep end. Drop it on the bottom of the pool and it keeps perfect time, dive after dive.</p>
-      </div>
-      <div class="card reveal" data-d="1">
-        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M7 10v4M11 10v4M15 10v4"/></svg></div>
-        <h3>BOLD LED digits</h3>
-        <p>Digits 2¼″ tall with three brightness levels. Readable from ~25 yards away, goggles on, underwater.</p>
-      </div>
-      <div class="card reveal" data-d="2">
-        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M13 3 4 14h7l-1 7 9-11h-7l1-7Z"/></svg></div>
-        <h3>Rechargeable</h3>
-        <p>8+ sessions of 100 minutes per charge. It sleeps to save power, then wakes the instant you need it.</p>
-      </div>
-      <div class="card reveal">
-        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
-        <h3>Count up or down</h3>
-        <p>From 0 to 99:59, your way. Run intervals, send-offs and USRPT sets without ever leaving the wall.</p>
-      </div>
-      <div class="card reveal" data-d="1">
-        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2 4 6v6c0 5 3.4 8.5 8 10 4.6-1.5 8-5 8-10V6l-8-4Z"/></svg></div>
-        <h3>Marine-grade build</h3>
-        <p>Aluminum nest and acrylic lens machined in the USA. ~5.4 lbs of robust, replaceable hardware.</p>
-      </div>
-      <div class="card reveal" data-d="2">
-        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M5 12l4-4M5 12l4 4"/><path d="M19 5v14"/></svg></div>
-        <h3>Stays put</h3>
-        <p>Suction-cup silicone pad anchors it to smooth pool bottoms — and to the mirror in your Endless Pool®.</p>
+    <div class="build-grid">
+      <figure class="build-photo reveal">
+        <img src="images/led-angle.jpg" alt="PACE PAL LED clock at an angle, showing the machined aluminum case and acrylic lens" loading="lazy">
+        <figcaption>Aluminum nest and acrylic lens, machined in the USA.</figcaption>
+      </figure>
+      <div class="build-copy">
+        <div class="reveal">
+          <p class="label">Built for the water</p>
+          <h2>A pace clock that lives where you swim</h2>
+        </div>
+        <dl class="spec-list reveal" data-d="1">
+          <div><dt>Waterproof</dt><dd>To 20 feet. Drop it in the deep end and it keeps time, dive after dive.</dd></div>
+          <div><dt>Digits</dt><dd>2¼″ tall &times; 1¼″ wide. Readable from about 25 yards, goggles on, underwater.</dd></div>
+          <div><dt>Display</dt><dd>Bold LED with three brightness levels.</dd></div>
+          <div><dt>Timer</dt><dd>Counts up or down, 0&ndash;99:59. Intervals, send-offs and USRPT sets.</dd></div>
+          <div><dt>Battery</dt><dd>Rechargeable. 8+ sessions of 100 minutes per charge. It sleeps to save power and wakes when you need it.</dd></div>
+          <div><dt>Case</dt><dd>9¾″ &times; 5¼″ &times; 2⅛″ marine-grade aluminum.</dd></div>
+          <div><dt>Weight</dt><dd>About 5.4 lbs with the clock inside.</dd></div>
+          <div><dt>Stays put</dt><dd>Suction-cup silicone pad for smooth pool bottoms and the mirror in your Endless Pool®.</dd></div>
+        </dl>
+        <p class="spec-note reveal">Specs shown for the LED clock. <a href="lcd-pace-clock.html">LCD specs</a></p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===== Split: on the bottom ===== -->
-<section class="section section--tight">
+<!-- ===== Set it & swim ===== -->
+<section class="section setit">
   <div class="wrap">
-    <div class="split">
-      <div class="split-media reveal">
-        <div class="media-frame">
-          <img src="images/in-pool.jpg" alt="Pace Pal underwater pace clock resting on the bottom of a pool">
-          <div class="ph"><div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 16c2 0 2 1.5 4 1.5S8 16 10 16s2 1.5 4 1.5S16 16 18 16s2 1.5 4 1.5"/><path d="M2 11c2 0 2 1.5 4 1.5S8 11 10 11s2 1.5 4 1.5S16 11 18 11s2 1.5 4 1.5"/></svg><div class="ph-mark">PACE PAL on the pool floor</div><div class="ph-label">Drop in <code>images/in-pool.jpg</code></div></div></div>
-        </div>
+    <div class="setit-grid">
+      <div class="setit-photo reveal">
+        <img src="images/in-pool-2.jpg" alt="A swimmer's hand above a PACE PAL clock reading 23:45 on the lane line at the bottom of the pool" loading="lazy">
       </div>
-      <div class="split-copy reveal" data-d="1">
-        <span class="eyebrow">Set it &amp; swim</span>
+      <div class="setit-copy reveal" data-d="1">
+        <p class="label">Set it &amp; swim</p>
         <h2>From the deck to the deep end in seconds</h2>
-        <p class="lede">Weighing in at about 5 lbs, PACE PAL® sits stable on the pool bottom. The included double-sided multi-suction silicone pad locks it to smooth surfaces — and to the bottom mirror of flow-current pools like Endless Pools®.</p>
+        <p class="lede">Weighing in at about 5 lbs, PACE PAL® sits stable on the pool bottom. The included double-sided multi-suction silicone pad locks it to smooth surfaces, including the bottom mirror of flow-current pools like Endless Pools®.</p>
         <ul class="checklist">
-          <li>Anchors to smooth pool bottoms and Endless Pools® mirrors</li>
-          <li>Reads perfectly above water too — maximize your investment</li>
+          <li>Reads perfectly above water too, at the end of your lane</li>
           <li>Three brightness options for any natatorium or backyard pool</li>
           <li>When the clock inside eventually wears out, replace it in the original case</li>
         </ul>
-        <div class="btn-row" style="margin-top:28px">
-          <a class="btn btn--primary" href="led-pace-clock.html">Get yours</a>
-          <a class="btn btn--ghost" href="training.html">Training ideas</a>
-        </div>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== Specs ===== -->
-<section class="section">
-  <div class="wrap">
-    <div class="section-head reveal"><span class="eyebrow">The numbers</span><h2>Spec sheet</h2></div>
-    <div class="specs reveal">
-      <div class="spec"><div class="k">Display</div><div class="v">Bold LED · 3 brightness levels</div></div>
-      <div class="spec"><div class="k">Digit size</div><div class="v">2¼″ tall × 1¼″ wide</div></div>
-      <div class="spec"><div class="k">Range</div><div class="v">Counts up/down · 0–99:59</div></div>
-      <div class="spec"><div class="k">Waterproof</div><div class="v">To 20 feet underwater</div></div>
-      <div class="spec"><div class="k">Case</div><div class="v">9¾″ × 5¼″ × 2⅛″ · marine-grade aluminum</div></div>
-      <div class="spec"><div class="k">Weight</div><div class="v">~5.4 lbs with clock inside</div></div>
-      <div class="spec"><div class="k">Battery</div><div class="v">Rechargeable · 8+ sessions of 100 min</div></div>
-      <div class="spec"><div class="k">Origin</div><div class="v">Designed &amp; milled in the USA</div></div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== Products ===== -->
-<section class="section section--tight">
-  <div class="wrap">
-    <div class="section-head center reveal"><span class="eyebrow">Choose your clock</span><h2>Two ways to stay on pace</h2></div>
-    <div class="grid grid-2">
-      <article class="product-card reveal">
-        <div class="pc-media"><div class="media-frame" style="border:0;border-radius:0;aspect-ratio:auto;height:100%">
-          <img src="images/led-clock.jpg" alt="LED Underwater Pace Clock">
-          <div class="ph"><div><div class="ph-mark">LED Clock</div><div class="ph-label">images/led-clock.jpg</div></div></div>
-        </div></div>
-        <div class="pc-body">
-          <span class="tag">Light-Emitting Digits</span>
-          <h3>LED Underwater Pace Clock</h3>
-          <p class="muted">Glowing LED digits with three brightness levels — the brightest, most visible option for indoor pools, low light and deep water.</p>
-          <div class="price">$465 <small>USD</small></div>
-          <div class="pc-foot">
-            <button class="btn btn--primary" data-add="led">Add to cart</button>
-            <a class="btn btn--ghost" href="led-pace-clock.html">Details</a>
-          </div>
-        </div>
-      </article>
-      <article class="product-card reveal" data-d="1">
-        <div class="pc-media"><div class="media-frame" style="border:0;border-radius:0;aspect-ratio:auto;height:100%">
-          <img src="images/lcd-clock.jpg" alt="LCD Underwater Pace Clock">
-          <div class="ph"><div><div class="ph-mark">LCD Clock</div><div class="ph-label">images/lcd-clock.jpg</div></div></div>
-        </div></div>
-        <div class="pc-body">
-          <span class="tag">Reflects Ambient Light</span>
-          <h3>LCD Underwater Pace Clock</h3>
-          <p class="muted">High-contrast bold black digits on silver. Optimal in outdoor pools and well-lit natatoriums where ambient light does the work.</p>
-          <div class="price">$465 <small>USD</small></div>
-          <div class="pc-foot">
-            <button class="btn btn--primary" data-add="lcd">Add to cart</button>
-            <a class="btn btn--ghost" href="lcd-pace-clock.html">Details</a>
-          </div>
-        </div>
-      </article>
     </div>
   </div>
 </section>
 
 <!-- ===== Training ===== -->
-<section class="section">
+<section class="section training">
   <div class="wrap">
-    <div class="split rev">
-      <div class="split-media reveal">
-        <div class="video-frame">
-          <iframe src="https://www.youtube-nocookie.com/embed/H1VRvFKfStA" title="Pace Pal in action" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-      </div>
-      <div class="split-copy reveal" data-d="1">
-        <span class="eyebrow">Train with intent</span>
-        <h2>Made for USRPT &amp; Endless Pools®</h2>
-        <p class="lede">Ultra-Short Race-Pace Training lives and dies by the clock. PACE PAL® puts your send-off right in your line of sight so you hold pace, rep after rep — no squinting at the wall, no breaking rhythm.</p>
-        <ul class="checklist">
-          <li>Perfect for short, fast, pace-specific interval sets</li>
-          <li>Ideal in the confined space of an Endless Pool®</li>
-          <li>Use it above water for masters, triathlon and open-water dryland</li>
-        </ul>
-        <div class="btn-row" style="margin-top:28px"><a class="btn btn--ghost" href="training.html">More training ideas</a></div>
-      </div>
+    <div class="training-head reveal">
+      <p class="label">Train with intent</p>
+      <h2>Made for USRPT &amp; Endless Pools®</h2>
+    </div>
+    <div class="video-frame reveal">
+      <iframe src="https://www.youtube-nocookie.com/embed/H1VRvFKfStA" title="Pace Pal in action" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div class="training-cols reveal">
+      <p>Ultra-Short Race-Pace Training lives and dies by the clock. PACE PAL® puts your send-off right in your line of sight, so you hold pace rep after rep without squinting at the wall.</p>
+      <ul class="checklist">
+        <li>Short, fast, pace-specific interval sets</li>
+        <li>The confined space of an Endless Pool®</li>
+        <li>Above water for masters, triathlon and open-water dryland</li>
+      </ul>
+      <p><a class="link-arrow" href="training.html">More training ideas</a></p>
     </div>
   </div>
 </section>
 
 <!-- ===== Endorsements ===== -->
-<section class="section" id="testimonials">
+<section class="section endorse" id="testimonials">
   <div class="wrap">
-    <div class="section-head center reveal">
-      <span class="eyebrow">Endorsed by champions</span>
-      <h2>Trusted by Olympians &amp; Olympic coaches</h2>
-      <p class="lede" style="margin:0 auto">From gold medalists to NCAA programs, Pace Pal is on deck — and on the pool bottom — with some of the best in the sport.</p>
-    </div>
-
-    <div class="video-frame reveal" style="margin-bottom:52px">
-      <video data-hero-video data-lazy data-src-720="video/testimonial-720.mp4" data-src-1080="video/testimonial-1080.mp4" muted loop playsinline preload="none" poster="video/testimonial-poster.jpg" aria-hidden="true" tabindex="-1" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"></video>
-    </div>
-
-    <div class="split" style="align-items:center;margin-bottom:52px">
-      <div class="split-media reveal">
-        <div class="media-frame tall" style="aspect-ratio:3/4;display:grid;place-items:center;background:linear-gradient(165deg,var(--ink-600),var(--ink-800))">
-          <img src="images/vanderkaay.png" alt="Peter Vanderkaay, four-time Olympic medalist and Pace Pal endorser" style="object-fit:contain;padding:24px">
-          <div class="ph"><div><div class="ph-mark">Peter Vanderkaay</div><div class="ph-label">images/vanderkaay.png</div></div></div>
-        </div>
+    <div class="endorse-lead">
+      <div class="endorse-photo reveal">
+        <img src="images/vanderkaay.png" alt="Peter Vanderkaay, four-time Olympic medalist and Pace Pal endorser" loading="lazy">
       </div>
-      <div class="split-copy reveal" data-d="1">
-        <span class="eyebrow">Official endorser</span>
-        <h3 style="font-size:clamp(1.7rem,3.4vw,2.4rem);margin:16px 0 8px">Peter Vanderkaay</h3>
-        <p style="font-family:var(--font-led);font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--led-cyan)">4× Olympic medalist · 2× Olympic gold</p>
-        <p class="lede" style="margin-top:20px">A University of Michigan great with five NCAA titles and four Olympic medals, Peter used Pace Pal for six months before agreeing to endorse it. He's joined by Olympic coach Gregg Troy and Michigan's Mike Bottom.</p>
-        <div class="btn-row" style="margin-top:26px"><a class="btn btn--ghost" href="testimonials.html">Read all testimonials</a></div>
+      <div class="reveal" data-d="1">
+        <p class="label">Official endorser</p>
+        <h2>Peter Vanderkaay</h2>
+        <p class="endorse-role">4&times; Olympic medalist &middot; 2&times; Olympic gold</p>
+        <p class="lede">A University of Michigan great with five NCAA titles and four Olympic medals, Peter used Pace Pal for six months before agreeing to endorse it. He's joined by Olympic coach Gregg Troy and Michigan's Mike Bottom.</p>
       </div>
     </div>
-
-    <div class="grid grid-3">
-      <div class="card reveal">
-        <p style="font-family:var(--font-display);font-size:1.18rem;line-height:1.5;font-weight:600">"Love my Pace Pal — use it every time I am in my Endless Pool."</p>
-        <div style="margin-top:20px;font-family:var(--font-led);font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;color:var(--led-cyan)">Rowdy Gaines<br><span style="color:var(--text-dim)">3× Olympic gold medalist</span></div>
-      </div>
-      <div class="card reveal" data-d="1">
-        <p style="font-family:var(--font-display);font-size:1.18rem;line-height:1.5;font-weight:600">"Pace Pal clocks have been a real plus for our program — making training more reliable and visible to our athletes."</p>
-        <div style="margin-top:20px;font-family:var(--font-led);font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;color:var(--led-cyan)">Gregg Troy<br><span style="color:var(--text-dim)">2012 USA Olympic coach</span></div>
-      </div>
-      <div class="card reveal" data-d="2">
-        <p style="font-family:var(--font-display);font-size:1.18rem;line-height:1.5;font-weight:600">"Love my Pace Pal digital pace-clock that sits right at the end of my lane… or even underwater! Larry Day, you are a genius."</p>
-        <div style="margin-top:20px;font-family:var(--font-led);font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;color:var(--led-cyan)">Karlyn Pipes<br><span style="color:var(--text-dim)">Int'l Swimming Hall of Fame</span></div>
-      </div>
+    <div class="quotes">
+      <figure class="reveal">
+        <blockquote>&ldquo;I just love it and use it every time I am in my Endless Pool.&rdquo;</blockquote>
+        <figcaption>Rowdy Gaines <span>3&times; Olympic gold medalist</span></figcaption>
+      </figure>
+      <figure class="reveal" data-d="1">
+        <blockquote>&ldquo;Pace Pal clocks have been a real plus for our program. They&rsquo;ve allowed our athletes to be more aware of their timing in practice.&rdquo;</blockquote>
+        <figcaption>Gregg Troy <span>2012 USA Olympic coach</span></figcaption>
+      </figure>
+      <figure class="reveal" data-d="2">
+        <blockquote>&ldquo;LOVE my new Pace Pal&reg; digital pace-clock that sits right at the end of my lane&hellip; or even underwater! Larry Day, you are a genius.&rdquo;</blockquote>
+        <figcaption>Karlyn Pipes <span>Int&rsquo;l Swimming Hall of Fame</span></figcaption>
+      </figure>
     </div>
+    <p class="reveal"><a class="link-arrow" href="testimonials.html">Read all testimonials</a></p>
   </div>
 </section>
 
-<!-- ===== Founder quote ===== -->
-<section class="section">
+<!-- ===== Founder ===== -->
+<section class="section founder">
   <div class="wrap">
-    <div class="quote reveal">
-      <span class="eyebrow">From the founder</span>
-      <blockquote style="margin-top:24px">"I've been a swimmer most of my life and always wanted a <span class="gradient-text">highly visible</span> pace clock on the bottom of the pool — so I created PACE PAL®."</blockquote>
-      <div class="by">Larry Day · President, Pace Pal<br><small>University of Michigan Swimmer, '69–'73</small></div>
-    </div>
+    <figure class="reveal">
+      <blockquote>&ldquo;I&rsquo;ve been a swimmer most of my life and always wanted a highly visible pace clock on the bottom of the pool. So I created PACE PAL®.&rdquo;</blockquote>
+      <figcaption>Larry Day, President, Pace Pal <span>University of Michigan swimmer, &rsquo;69&ndash;&rsquo;73</span></figcaption>
+    </figure>
   </div>
 </section>
 
-<!-- ===== CTA ===== -->
-<section class="section section--tight">
-  <div class="wrap">
-    <div class="cta-band reveal">
-      <span class="eyebrow">60-day, no-questions-asked refund</span>
-      <h2 style="margin-top:18px">Put the clock where you swim</h2>
-      <p class="lede" style="margin:0 auto 28px">Try PACE PAL® for 60 days. If it's not the most visible clock you've ever trained with, send it back for a full refund.</p>
-      <div class="btn-row" style="justify-content:center"><a class="btn btn--primary btn--lg" href="led-pace-clock.html">Shop now</a><a class="btn btn--ghost btn--lg" href="contact.html">Talk to us</a></div>
+<!-- ===== Close: the guarantee ===== -->
+<section class="closer">
+  <div class="wrap"><div class="closer-inner reveal">
+    <div>
+      <h2>Put the clock where you swim</h2>
+      <p class="muted">Try PACE PAL® for 60 days. If it's not the most visible clock you've ever trained with, send it back for a full refund. No questions asked.</p>
     </div>
-  </div>
+    <div class="btn-row">
+      <a class="btn btn--primary btn--lg" href="#choose">Choose your clock</a>
+      <a class="btn btn--ghost btn--lg" href="contact.html">Talk to us</a>
+    </div>
+  </div></div>
 </section>
 
 <!-- ===== Footer ===== -->
