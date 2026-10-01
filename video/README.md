@@ -1,7 +1,9 @@
 # Site videos
 
-Two self-hosted loops on the homepage, each in two cuts plus a poster.
-They play through the small HeroVideo player at the end of `js/main.js`:
+Two self-hosted loops, each in two cuts plus a poster. Since the 2026-10
+design pass neither is on the homepage: both are generated footage, so the
+hero uses the real underwater photo (`images/in-pool.jpg`) instead. They are
+kept here until a real product film replaces them. When used, they play through the small HeroVideo player at the end of `js/main.js`:
 720 cut on phones (640px and under), 1080 everywhere else, poster only for
 reduced motion or no JS. The testimonial loop waits until it is near the
 screen before it downloads anything. There is no third-party fallback.
